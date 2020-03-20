@@ -25,3 +25,15 @@
 
 ### Connect to the running container
 `docker exec -it openstaking /bin/zsh`
+
+### Start a Tmux session to run the node
+`tmux new-session -s openstaking`
+
+## Run the validator node (The docker container will have the necessary hmy and node.sh files baked in)
+`./node.sh -M -N staking -z -S `
+
+Disconnect from Tmux session by pressing CTRL-b then d
+Refer Harmony docs to create validator
+To connect back to the running docker container use 
+`docker exec -it openstaking /bin/zsh`
+
