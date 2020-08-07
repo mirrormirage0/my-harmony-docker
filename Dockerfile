@@ -13,8 +13,8 @@ RUN mkdir -p .hmy/blskeys
 COPY keys/* /openstaking/.hmy/blskeys/
 COPY keys/* /openstaking/
 
-RUN curl -LO https://harmony.one/hmycli &&  mv hmycli hmy && chmod +x hmy 
-RUN curl -LO https://harmony.one/node2.sh && mv  node2.sh node.sh && chmod a+x node.sh
+RUN curl -LO https://harmony.one/hmycli && mv hmycli hmy && chmod +x hmy
+RUN curl -LO https://harmony.one/node.sh && chmod a+x node.sh
 
 RUN echo 'alias sync="tail -f latest/zero*.log | grep SYNC"' >> ~/.bashrc
 RUN echo 'alias bingo="grep BINGO latest/zero*.log"' >> ~/.bashrc
