@@ -6,6 +6,8 @@ WORKDIR /openstaking
 
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y curl wget zip unzip psmisc dnsutils libgmp-dev nano tmux git
+RUN apt-get install npm
+RUN npm install pm2@latest -g
 
 RUN mkdir -p .hmy/blskeys
 COPY keys/* /openstaking/.hmy/blskeys/
